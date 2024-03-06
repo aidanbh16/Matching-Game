@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../public/stylesheet.css">
+        <title>Matching Game Project</title>
+    </head>
+    <body id="body">
+        <header id="header">Matching Game</header>
+        <div class="snowfall">
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+            <div class="snow"></div>
+        </div>
+        <script src="../src/snow.js"></script>
+        <div>
+           <button class="playButton" type="button" onclick="runTitle(), runPlayBut()">Play</button>
+        </div>
+        <div class="grid">
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+            <button disabled class="gridBut but" value="false" onclick="buttonClick(this)"></button>
+        </div>
+        <div>
+            <button class="start" type="button" onclick="runStartBut(), startStopwatch(), runMatching()">Start</button>
+        </div>
+        <div class="stopwatch">00:00:00</div>
+        <div>
+            <button class="reset" type="button" onclick="reload()">Reset</button>
+        </div>
+        <script src="../src/playbutton.js"></script>
+        <script src="../src/stopwatch.js"></script>
+        <script src="../src/matching.js"></script>
+        <footer id="footer">
+            <div class="footerBody">
+                <div class="container">
+                    <a href="https://github.com/aidanbh16" target="_blank"><img src="../public/img/github.512x499.png" alt="github" class="githubButton"></a>
+                    <a href="https://www.linkedin.com/in/aidan-holton/" target="_blank"><img src="../public/img/linkedin-app-white-icon.png" alt="linkedin" class="linkedinButton"></a>
+                    <a href="https://www.instagram.com/holton_aidan/" target="_blank"><img src="../public/img/instagram-white-icon.png" alt="instagram" class="instagramButton"></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

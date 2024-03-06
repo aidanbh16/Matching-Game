@@ -1,0 +1,480 @@
+body {
+    margin: 0;
+    background: linear-gradient(white, skyblue);
+    background-attachment: fixed;
+}
+
+#header {
+    top: 80px;
+    position: absolute;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.8px;
+    text-shadow: 0px 0px 10px black;
+    width: 99.5vw;
+    height: 5vh;
+    z-index: 999;
+    animation: exit 1.5s ease-in-out forwards;
+    animation-play-state: paused;
+}
+
+@keyframes exit {
+    0% {
+        top: 80px;
+    }
+    20% {
+        top: 110px;
+    }
+    100% {
+        top: -200px;
+    }
+}
+
+/*-----Snow-----*/
+
+.snowfall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.snow {
+    background-color: snow;
+    box-shadow: 0px 0px 10px snow;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    animation: fall 9s linear infinite;
+    position: absolute;
+    top: -40px;
+    left: 10%;
+    z-index: 1;
+}
+
+.snow:nth-child(1) {
+    animation-duration: 6s;
+    position: absolute;
+    top: -40px;
+    left: 20%;
+    opacity: 0.2;
+}
+
+.snow:nth-child(2) {
+    animation-duration: 8s;
+    position: absolute;
+    top: -40px;
+    left: 30%;
+    height: 15px;
+    width: 15px;
+}
+
+.snow:nth-child(3) {
+    animation-duration: 12s;
+    position: absolute;
+    top: -40px;
+    left: 43%;
+    height: 7px;
+    width: 7px;
+    opacity: 0.4;
+}
+
+.snow:nth-child(4) {
+    animation-duration: 7s;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    height: 25px;
+    width: 25px;
+}
+
+.snow:nth-child(5) {
+    animation-duration: 7.5s;
+    position: absolute;
+    top: -40px;
+    left: 38%;
+    height: 40px;
+    width: 40px;
+}
+
+.snow:nth-child(6) {
+    animation-duration: 5.8s;
+    position: absolute;
+    top: -40px;
+    left: 84%;
+    height: 13px;
+    width: 13px;
+}
+
+.snow:nth-child(7) {
+    animation-duration: 10.4s;
+    position: absolute;
+    top: -40px;
+    left: 70%;
+    height: 4px;
+    width: 4px;
+}
+
+.snow:nth-child(8) {
+    animation-duration: 6.4s;
+    position: absolute;
+    top: -40px;
+    left: 90%;
+    height: 34px;
+    width: 34px;
+    opacity: 0.7;
+}
+
+.snow:nth-child(9) {
+    animation-duration: 7.2s;
+    position: absolute;
+    top: -40px;
+    left: 7%;
+    height: 17px;
+    width: 17px;
+}
+
+.snow:nth-child(10) {
+    animation-duration: 8.8s;
+    position: absolute;
+    top: -40px;
+    left: 24%;
+}
+
+.snow:nth-child(11) {
+    animation-duration: 11.2s;
+    position: absolute;
+    top: -40px;
+    left: 56%;
+}
+
+.snow:nth-child(12) {
+    animation-duration: 7.9s;
+    position: absolute;
+    top: -40px;
+    left: 89%;
+    height: 34px;
+    width: 34px;
+    opacity: 0.4;
+}
+
+.snow:nth-child(13) {
+    animation-duration: 9.7s;
+    position: absolute;
+    top: -40px;
+    left: 47%;
+    opacity: 0.8;
+}
+
+.snow:nth-child(14) {
+    animation-duration: 6.7s;
+    position: absolute;
+    top: -40px;
+    left: 2%;
+    opacity: 0.9;
+}
+
+.snow:nth-child(15) {
+    animation-duration: 8s;
+    position: absolute;
+    top: -40px;
+    left: 75%;
+}
+
+.snow:nth-child(16) {
+    animation-duration: 6.4s;
+    position: absolute;
+    top: -40px;
+    left: 97%;
+    opacity: 0.6;
+}
+
+@keyframes fall{
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+/*-------PlayButton------*/
+
+.playButton {
+    font-weight: 900;
+    color: white;
+    position: absolute;
+    left: 41.5%;
+    top: 25%;
+    background-color: rgb(141, 226, 255);
+    box-shadow: 0px 0px 20px rgb(240, 240, 240);
+    width: 300px;
+    height: 150px;
+    border: 4px solid snow;
+    border-radius: 30px;
+    z-index: 3;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    animation-name: float, disappear;
+    animation-duration: 4s, 1s;
+    animation-timing-function: ease-in-out, linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: running, paused;
+}
+
+.playButton:hover {
+    transform: scale(1.03);
+    background-color: rgb(130, 230, 255);
+    animation-play-state: paused;
+}
+
+@keyframes float {
+    0% {
+        margin-top: 120px;
+    }
+    50% {
+        margin-top: 170px;
+    }
+    100% {
+        margin-top: 120px;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*-----Grid-----*/
+
+.grid {
+    position: absolute;
+    margin: 225px;
+    left: 16.6%;
+    display: flex;
+    width: 700px;
+    height: 500px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 2;
+    opacity: 0;
+    animation: appear 1s linear forwards;
+    animation-delay: 1s;
+    animation-play-state: paused;
+}
+
+.gridBut {
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 20px;
+}
+
+.gridBut:hover {
+    filter: brightness(95%);
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*-----Start-----*/
+
+.start {
+    position: absolute;
+    left: 41.5%;
+    bottom: -10vh;
+    background-color: rgb(0, 150, 0);
+    color: white;
+    box-shadow: 0px 0px 20px rgb(240, 240, 240);
+    width: 300px;
+    height: 70px;
+    border: 5px solid snow;
+    border-radius: 30px;
+    z-index: 2;
+    font-family: sans-serif;
+    font-size: 40px;
+    animation-name: raise1, drop1;
+    animation-duration: 1.3s, 0.5s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s, 1ms;
+    animation-play-state: paused, paused;
+}
+
+.start:hover {
+    background-color: rgb(0, 175, 0);
+}
+
+@keyframes raise1{
+    0% {
+        bottom: -10vh;
+    }
+    70% {
+        bottom: 15%;;
+    }
+    100% {
+        bottom: 12%;
+    }
+}
+
+@keyframes drop1{
+    0% {
+        bottom: 12%;
+    }
+    100% {
+        bottom: -10vh;
+    }
+}
+
+/*-----Stopwatch-----*/
+
+.stopwatch {
+    font-family: sans-serif;
+    font-size: 60px;
+    position: absolute;
+    left: 43.4%;
+    margin-top: -100px;
+    animation: drop2 1.3s ease-in-out forwards;
+    animation-delay: 1s;
+    animation-play-state: paused;
+    z-index: 6;
+}
+
+@keyframes drop2{
+    0% {
+        margin-top: -100px;
+    }
+    70% {
+        margin-top: 95px;
+    }
+    100% {
+        margin-top: 80px;
+    }
+}
+
+@keyframes drop3{
+    0% {
+        margin-top: 80px;
+    }
+    100% {
+        margin-top: 300px;
+        transform: scale(2.0);
+    }
+}
+
+/*-----reset-----*/
+
+.reset {
+    position: absolute;
+    left: 41.5%;
+    bottom: -10vh;
+    background-color: rgb(0, 0, 235);
+    color: white;
+    box-shadow: 0px 0px 20px rgb(240, 240, 240);
+    width: 300px;
+    height: 70px;
+    border: 5px solid snow;
+    border-radius: 30px;
+    z-index: 7;
+    font-family: sans-serif;
+    font-size: 40px;
+    animation-name: raise3;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    opacity: 0;
+}
+
+.reset:hover {
+    background-color: rgb(0, 25, 255);
+}
+
+@keyframes raise3{
+    0% {
+        bottom: -10vh;
+    }
+    70% {
+        bottom: 50%;;
+    }
+    100% {
+        bottom: 45%;
+        opacity: 1;
+    }
+}
+
+
+/*-----Footer-----*/
+
+#footer {
+    background: linear-gradient(skyblue, white);
+    border-top: 2px solid snow;
+    width: 100vw;
+    height: 8vh;
+    position: absolute;
+    bottom: -10vh;
+    z-index: 10;
+}
+
+.container {
+    margin: 15px auto;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.githubButton {
+    width: 40px;
+    height: 40px;
+}
+
+.githubButton:hover {
+    animation: hover 0.2s ease-in-out forwards;
+}
+
+.linkedinButton {
+    width: 40px;
+    height: 40px;
+}
+
+.linkedinButton:hover {
+    animation: hover 0.2s ease-in-out forwards;
+}
+
+.instagramButton {
+    width: 40px;
+    height: 40px;
+}
+
+.instagramButton:hover {
+    animation: hover 0.2s ease-in-out forwards;
+}
+
+@keyframes hover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
